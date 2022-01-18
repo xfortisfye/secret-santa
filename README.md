@@ -1,28 +1,27 @@
 # secret-santa
 
-## Setting Up
-### Windows
-#### Installing Python
-1. [Install](https://www.python.org/ftp/python/3.8.5/python-3.8.5-amd64.exe) python
-2. Set up environment PATH, if not you will not be unable to run `py`/`python` 
-    1. Right-click on 'This PC' > Properties > Advance System Settings > Environment Variables
-    2. Under System Variable, Select PATH
-    3. Click on Edit, enter location. Usually: `C:\Python38\`
+## Description of Project
 
-> If you are using vscode, relaunch it
-  
-#### Installing Dependencies
-1. Install pip requirements
-```bash
-> cd \Path\to\root-folder
-> pip install -r requirements.txt
-```
+
+## Setting Up
+1. [Installing python and pip](https://github.com/ehandywhyy/303-see-other/blob/main/python-and-pip.md)
+2. Installing dependencies
+    1. Install pip requirements
+    ```bash
+    > cd \Path\to\root-folder
+    > pip install -r requirements.txt
+    ```
 - - - -
 
 ## Usage
-Change the value of the following variables 
+1. Initialise your email and password value in ***app.py***
+```python
 MAIL_USERNAME = "your_email"
 MAIL_PASSWORD = "your_password"
-
+```
+2. Initialise the name and email of respective friends in order in ***app.py***
+```python
 NAME = ["name1", "name2", "name3"]
 EMAIL = ["fakeemail1", "fakeemail2", "fakeemail3"]
+```
+3. Run the program and head to http://127.0.0.1:5000 to generate secret santa to your respective friends' email
