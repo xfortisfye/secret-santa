@@ -4,7 +4,7 @@
 
 
 ## Setting Up
-1. [Installing python and pip](https://github.com/ehandywhyy/303-see-other/blob/main/python-and-pip.md)
+1. [Installing python 3.8.5 and pip](https://github.com/ehandywhyy/303-see-other/blob/main/python-and-pip.md)
 2. Installing dependencies
     1. Install pip requirements
     ```bash
