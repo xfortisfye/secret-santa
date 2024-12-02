@@ -22,6 +22,6 @@ MAIL_PASSWORD = "your_password"
 2. Initialise the name and email of respective friends in order in ***app.py***
 ```python
 NAME = ["name1", "name2", "name3"]
-EMAIL = ["fakeemail1", "fakeemail2", "fakeemail3"]
+EMAIL = ["email1", "email2", "email3"]
 ```
 3. Run the program and head to http://127.0.0.1:5000 to generate secret santa to your respective friends' email

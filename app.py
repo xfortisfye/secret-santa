@@ -11,8 +11,8 @@ app = Flask(__name__)
 MAIL_SERVER = "smtp.gmail.com"
 MAIL_PORT = 587
 MAIL_USE_TLS = True
-MAIL_USERNAME = "key in your gmail here"
-MAIL_PASSWORD = "key in your app password here"
+MAIL_USERNAME = "your_email"
+MAIL_PASSWORD = "your_password"
 
 NAME = ["name1", "name2", "name3"]
 EMAIL = ["email1", "email2", "email3"]
