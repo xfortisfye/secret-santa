@@ -1,4 +1,9 @@
-import random, os
+##### GUIDE #####
+
+# replace the following variables with your information MAIL_USERNAME, MAIL_PASSWORD, NAME and EMAIL
+# do take note that email1 should belong to name1, email2 to name2 and so forth.
+
+import random
 from flask import Flask
 from flask_mail import Mail, Message
 
@@ -6,11 +11,11 @@ app = Flask(__name__)
 MAIL_SERVER = "smtp.gmail.com"
 MAIL_PORT = 587
 MAIL_USE_TLS = True
-MAIL_USERNAME = "your_email"
-MAIL_PASSWORD = "your_password"
+MAIL_USERNAME = "key in your gmail here"
+MAIL_PASSWORD = "key in your app password here"
 
 NAME = ["name1", "name2", "name3"]
-EMAIL = ["fakeemail1", "fakeemail2", "fakeemail3"]
+EMAIL = ["email1", "email2", "email3"]
 
 app.config['MAIL_SERVER'] = MAIL_SERVER
 app.config['MAIL_PORT'] = MAIL_PORT
@@ -27,16 +32,16 @@ def generator(name, email):
     giver = name.copy()
     receiver = name.copy()
 
-    different = False
-    while different is not True:
-        different = True
+    duplicate_flag = False
+    while duplicate_flag is not True:
+        duplicate_flag = True
         random.shuffle(receiver)
 
         for i in range(len(giver)):
             if giver[i] == receiver[i]:
-                different = False
+                duplicate_flag = False
             
-        if different is True:
+        if duplicate_flag is True:
             send_mail(santa_dict, giver, receiver)
 
 def send_mail(santa_dict, giver, receiver):
@@ -48,16 +53,17 @@ def send_mail(santa_dict, giver, receiver):
             sender=("SECRET SANTA CO.",  MAIL_USERNAME),
             recipients=[santa_dict.get(giver[i])]
         )
-        msg.html = "<p>Hello <b>" + giver[i] + ",</b></p>"
-        msg.html += "<p>You are to gift: " + receiver[i] + ".</b></p>"
-        # msg.html += '<img src="https://www.theplace2.ru/archive/megan_fox/img/96176036.jpg">'
-        msg.html += "<p>Created by @ehandywhyy in Github</b></p>"
+        msg.html = "<p>Greetings " + giver[i] + ",</p><br/>"
+        msg.html += "<p>You are the secret santa to: <b><u>" + receiver[i] + "</u></b>.</p>"
+        msg.html += "<p>The budget is maximum $20 :)</p>"
+        # msg.html += '<img src="https://img.freepik.com/free-vector/gradient-christmas-tinsel-background_52683-76117.jpg">'
+        msg.html += "<p>Created by <a href=\"https://github.com/xfortisfye\">@xfortisfye</a></p>"
         mail.send(msg)
 
 @app.route("/")
 def index():
     generator(NAME, EMAIL)
-    return "Email has been sent."
+    return "Email has been sent without errors. Do remind your users to check their junk box."
 
 if __name__ == '__main__':
    app.run(debug = True)
