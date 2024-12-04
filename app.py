@@ -48,7 +48,7 @@ def send_mail(santa_dict, receiver):
         msg.html = "<p>Greetings " + giver_name + ",</p><br/>"
         msg.html += "<p>You are the secret santa to: <b><u>" + receiver[_] + "</u></b>.</p>"
         msg.html += "<p>The budget is maximum $20 :)</p>"
-        # msg.html += '<img src="https://img.freepik.com/free-vector/gradient-christmas-tinsel-background_52683-76117.jpg">'
+        msg.html += '<img src="https://img.freepik.com/free-vector/gradient-christmas-tinsel-background_52683-76117.jpg">'
         msg.html += "<p>Created by <a href=\"https://github.com/xfortisfye\">@xfortisfye</a></p>"
         mail.send(msg)
 
