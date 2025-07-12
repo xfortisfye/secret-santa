@@ -1,6 +1,6 @@
 # secret-santa
 
-## Description of Project
+## Description
 Able to send who your secret santa is through email.
 
 If you wish to support me, feel free to tip here :)
