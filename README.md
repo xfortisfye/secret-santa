@@ -1,6 +1,11 @@
 # secret-santa
 
 ## Description of Project
+Able to send who your secret santa is through email.
+
+If you wish to support me, feel free to tip here :)
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/xfortisfye)
 
 
 ## Setting Up
